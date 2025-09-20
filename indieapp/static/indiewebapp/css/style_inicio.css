@@ -1,0 +1,183 @@
+
+
+body{
+  background-color: #161f2f;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+a{
+  text-decoration: none;
+}
+
+.game_container{
+  margin: 3vw;
+  /* background-color: blueviolet; */
+}
+
+/* tres populares inicio  */
+
+.box-3-popular-1 img {
+  border-radius: 10px 10px 10px 10px;
+}
+
+
+.box-3-popular-2 img,
+.box-3-popular-3 img {
+  border-radius: 10px 10px 10px 10px;
+}
+
+
+/* tres populares fin */
+
+  /* Título del segundo contenedor */
+.title-container-2{
+  /* background-color: black; */
+  line-height: 1.5;
+  margin: 3vw auto;
+  
+}
+
+.title-container-2 .title{
+  /* padding-top: 30px; */
+  color: rgb(249 250 251);
+  font-size: 2rem;
+
+}
+
+.title-container-2 small{
+  color: rgb(156 163 175);
+  font-size: 1rem;
+}
+
+
+  /* segundo contenedor */
+  /* juegos en cartas */
+
+  .box-container-2 {
+    /* padding-top: 3vw; */
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 290vw));
+    gap: 20px; /* Espacio entre los elementos */
+  }
+
+  .box {
+    position: relative;
+    width: 100%; /* Ajusta el ancho de cada caja al 100% del contenedor */
+    background-color: #161f2f; /* Ajusta el color de fondo de la tarjeta */
+    border-radius: 10px; /* Redondea las esquinas de la tarjeta */
+    max-width: 290vw;
+    max-height: 501vw;
+  }
+
+  .box .content {
+    text-align: center; /* Centra el contenido */
+  }
+
+  .box .content img {
+    max-width: 100%; /* Ajusta la imagen para que no exceda el ancho del contenedor */
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+ .box .content h3{
+    font-size: 1.2vw;
+    position: absolute;
+    bottom:  0px;
+    width: 100%;
+    height: 60px;
+    line-height: 15px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .4);
+
+    text-align: center;
+    border-radius: 0 0 10px 10px ;
+    background-size: cover;
+    box-shadow: 0 -10px 50px rgba(0, 0, 0, .4);
+ }
+
+/* parte responsive */
+
+@media only screen and (max-width: 1075px) {
+
+  .box-container-2 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1vw; 
+  }
+
+  .box{
+    max-width: 125vw;
+    max-height: 250.5vh;
+  } 
+
+
+}
+
+
+@media only screen and (max-width: 1023px) {
+
+    .box-container-2 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1vw; 
+    }
+
+    .box{
+      max-width: 125vw;
+      max-height: 250.5vh;
+    } 
+
+
+}
+
+ 
+
+@media only screen and (max-width: 767px) {
+
+  /* sección responsive de los 3 populares */
+    .box-container-1{
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 1vw;
+    }
+
+    .box-3-popular-2-3 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 100%;
+
+    }
+
+    .box-3-popular-2 {
+      width: 100%;
+      height: 100%;
+    }
+    
+    
+    .box-3-popular-3 {
+      width: 100%;
+      height: 100%;
+    }
+
+
+  /* sección responsive de cartas de los juegos */
+    .box-container-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1vw; 
+    }
+
+    .box{
+      max-width: 125vw;
+      max-height: 250.5vh;
+    }
+
+    .box .content h3 {
+      font-size: 3vw; /* Utilizando vw para un tamaño de fuente relativo al ancho de la vista */
+    }
+
+  }

@@ -1,0 +1,80 @@
+{% extends "indiewebapp\base.html" %}
+{% load static %}
+{% block content %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+<link rel="stylesheet" href="{%static 'indiewebapp\css\reset.css' %}">
+<link rel="stylesheet" href="{% static 'indiewebapp\css\style_politicas.css' %}">
+<main>
+    <section class="welcome-section">
+        <h2>Bienvenido a Indie games</h2>
+        <p>Un espacio dedicado a la recopilación de juegos.</p>
+    </section>
+    <p>
+    <section class="policies-section">
+        <h3>Políticas de Acceso y Descarga</h3>
+        <ul>
+            <li>
+                <strong>Naturaleza del Sitio:</strong>
+                Este sitio web tiene un carácter meramente informativo y recopilatorio. La plataforma se limita a
+                <strong>compartir enlaces externos a juegos disponibles en internet</strong>, sin almacenar ni
+                distribuir directamente los archivos de los mismos.
+            </li>
+
+            <li>
+                <strong>Responsabilidad sobre los Contenidos Externos:</strong>
+                Todos los enlaces de descarga redirigen a sitios de terceros. Por lo tanto, no nos hacemos responsables
+                de:
+                <ul>
+                    <li>• La disponibilidad, seguridad o legalidad de los archivos alojados en dichos sitios.</li>
+                    <li>• Posibles daños, perjuicios o problemas técnicos derivados de la descarga o instalación de los
+                        juegos enlazados.</li>
+                </ul>
+                El acceso y la descarga se realizan <strong>bajo exclusiva responsabilidad del usuario</strong>.
+            </li>
+
+            <li>
+                <strong>Propiedad Intelectual del Sitio:</strong>
+                El diseño, logotipos, textos, estructura, compilación y demás elementos propios de este sitio web son de
+                uso exclusivo de la plataforma.
+                <ul>
+                    <li>• Queda <strong>prohibida la imitación, copia, reproducción o uso indebido</strong> de los
+                        elementos propios de la web sin autorización previa y por escrito.</li>
+                    <li>• El incumplimiento podrá dar lugar a las acciones legales correspondientes.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Uso Aceptable:</strong>
+                El usuario se compromete a:
+                <ul>
+                    <li>• No utilizar este sitio con fines ilícitos o contrarios a la buena fe.</li>
+                    <li>• Respetar en todo momento los derechos de autor de los desarrolladores y editores de los juegos
+                        enlazados.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Limitación de Responsabilidad:</strong>
+                El sitio no garantiza la disponibilidad ni el correcto funcionamiento de los enlaces externos en todo
+                momento. Asimismo, se excluye cualquier responsabilidad por:
+                <ul>
+                    <li>• Descargas fallidas.</li>
+                    <li>• Archivos corruptos o modificados por terceros.</li>
+                    <li>• Consecuencias legales derivadas del uso inadecuado de los juegos enlazados.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Aceptación de las Políticas:</strong>
+                El acceso y uso de esta web implica la <strong>aceptación plena de estas políticas</strong>. En caso de
+                no estar de acuerdo, se recomienda abstenerse de utilizar la plataforma.
+            </li>
+    </section>
+</main>
+
+
+{% endblock %}

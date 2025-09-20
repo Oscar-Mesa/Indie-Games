@@ -1,0 +1,92 @@
+<!-- en Django para realizar los active links
+se debe traer el nombre de las páginas  -->
+
+{% url 'cursor:inicio' as inicio %}
+{% url 'cursor:unity' as unity %}
+{% url 'cursor:rpgmaker' as rpgmaker %}
+{% url 'cursor:politicas' as politicas %}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- se carga la ruta donde están los elementos css, img, icons etc -->
+    {%load static %}
+    <!-- - -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indie games</title>
+    <link rel="stylesheet" href="{%static 'indiewebapp\css\reset.css' %}">
+    <link rel="stylesheet" href="{% static 'indiewebapp/css/style_navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'indiewebapp/css/style_footer.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+
+</head>
+<body>
+    <!-- Aquí comienza la barra de navegación -->
+    <header class="header">
+        <a href="{% url 'cursor:inicio' %}">
+        <div class="logo">
+            <img src="{% static 'indiewebapp/img/indiegameslogo.jpg' %}" alt="indie logo">
+        </a>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li>
+                    <!-- se debe crear una clase de tipo nav-link y un condicional 
+                    el 'active' se puede personalizar en CSS -->
+                    <a class="nav-link  {% if request.path == inicio %} active {% endif %}" href="{% url 'cursor:inicio' %}" >Inicio</a>
+                </li>
+                <li>
+                    <a class="nav-link  {% if request.path == unity %} active {% endif %}" href="{% url 'cursor:unity' %}">Unity</a>
+                </li>
+                <li>
+                    <a class="nav-link  {% if request.path == rpgmaker %} active {% endif %}" href="{% url 'cursor:rpgmaker' %}">RPGMaker</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- fin barra de navegación -->
+
+    <!-- el contenido de esta zona cambia -->
+    {% block content %}
+
+    {% endblock %}
+    <!-- fin de contenido cambiante -->
+
+
+    <!-- Aquí comienza el pie de la página  -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Indie games</h4>
+                    <ul>
+                        <li><a href="#">Patreon</a></li>
+                        <li><a href="{% url 'cursor:politicas' %}">Políticas de Acceso y Descarga</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Redes</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- fin del pie de página -->
+
+<script src="{% static 'indiewebapp/js/script_navbar.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* Estilos generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para las secciones */
+.welcome-section h2 {
+    color: black;
+    font-weight: bold;
+}
+
+.welcome-section p {
+    padding: 20px 0px 0px 10px ;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.policies-section {
+    margin-top: 20px;
+}
+
+.policies-section h3 {
+    color: black;
+    font-weight: bold;
+}
+
+.policies-section ul {
+    list-style-type: none;
+    padding: 20px 0px 0px 10px ;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.policies-section li {
+    margin-bottom: 10px;
+}
+
+.policies-section p {
+    padding: 20px 0px 0px 10px ;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Media queries para diseño responsivo */
+@media screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+}
